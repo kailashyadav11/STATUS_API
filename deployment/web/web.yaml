@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cortx-status
+  labels:
+    app: cortx-status
+spec:
+  ports:
+  - port: 80
+    name: cortx-status
+    protocol: "TCP"
+    targetPort: 8000
+  selector:
+    app: cortx-status
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cortx-status
+spec:
+  selector:
+    matchLabels:
+      app: cortx-status
+  serviceName: "cortx-status"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cortx-status
+    spec:
+      containers:
+      - name: cortx-status
+        image: cortx-status:latest
+        imagePullPolicy: Never
+        command:
+            - /bin/sh
+        args:
+            - -c
+            - cortx_status
+        ports:
+        - containerPort: 80
+          name: cortx-status
+
