@@ -1,6 +1,0 @@
-{
-  "Cluster":"online",
-  "DataPod":"offline",
-  "ServerPod":"failed",
-  "ControlPod":"restart"
-}

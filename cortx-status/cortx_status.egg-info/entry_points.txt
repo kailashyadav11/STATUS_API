@@ -1,4 +1,0 @@
-[console_scripts]
-cortx_status = cortx.status.cortx_status:main
-upgrade_status = cortx.status.upgrade_status:main
-

@@ -2,9 +2,10 @@
 
 import sys
 import json
-from cortx.db import  const
+from cortx.db import const
 from http.server import HTTPServer, BaseHTTPRequestHandler
-with open(const.UPGRADE_DB) as data_file:
+
+with open(const.CLUSTER_DB) as data_file:
     data = json.load(data_file)
 
 class ServiceHandler(BaseHTTPRequestHandler):

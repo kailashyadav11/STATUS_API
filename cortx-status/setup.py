@@ -27,7 +27,7 @@ setup(name='cortx-status',
         'cortx': ['py.typed']
     },
     entry_points={
-        'console_scripts': ['cortx_status = cortx.status.cortx_status:main', 'upgrade_status = cortx.status.upgrade_status:main'
+        'console_scripts': ['cortx_status = cortx.status.cortx_status:main', 'upgrade_status = cortx.status.upgrade_status:main', 'health_status = cortx.status.health_status:main'
         ]
     },
     data_files=[

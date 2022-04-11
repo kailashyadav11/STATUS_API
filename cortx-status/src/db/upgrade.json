@@ -1,6 +1,0 @@
-{ 
-  "Cluster": "none",
-  "ControlPod":"progress",
-  "ServerPod": "completed",
-  "DataPod":"failed"
-} 
